@@ -1,0 +1,31 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: normal;
+  text-align: center;
+  color: $gray;
+
+  &__item {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: $md) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__item {
+      margin: 0;
+      width: 33.33%;
+      &:first-child {
+        text-align: left;
+      }
+      &:last-child {
+        text-align: end;
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.main-block {
+
+  &__top {
+    display: flex;
+    //margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  &__contact {
+    display: none;
+    margin-left: auto;
+    font-weight: 500;
+  }
+  &__desc {
+    margin-right: 8px;
+  }
+  .menu-btn + &__desc {
+    margin-left: 32px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-block {
+    &__top {
+      margin-bottom: 32px;
+    }
+  }
+}
+
+@media screen and (min-width: $xl) {
+  .main-block {
+    &__content {
+      padding: 0 32px;
+    }
+    &__top {
+      margin-top: 18px;
+      margin-bottom: 8px;
+    }
+    &__contact {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

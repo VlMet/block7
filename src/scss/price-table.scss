@@ -1,0 +1,101 @@
+.price-table {
+  /*display: flex;
+  flex-direction: row;*/
+  &__item {
+    width: 260px;
+    height: 200px;
+    //display: flex;
+    //flex-direction: column;
+    //flex-grow: 0;
+    //margin: 16px 16px 16px 8px;
+    padding: 16px;
+    border-radius: 6px;
+    background-color: $white;
+    line-height: 1.29;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    color: $black;
+    position: relative;
+  }
+  &,
+  *::before {
+    color: $gray;
+    display: flex;
+    margin-bottom: 4px;
+  }
+  &__name {
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 16px;
+  }
+  &__name::before {
+    content: 'Ремонтные услуги';
+  }
+  &__price {
+    margin-bottom: 16px;
+  }
+  &__price::before {
+    content: 'Цена';
+  }
+  &__date::before {
+    content: 'Срок';
+  }
+  &__btn {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+  }
+}
+
+@media screen and (min-width: $md) {
+  .price-table {
+    margin-top: 63px;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 16px;
+    border-radius: 6px;
+    background-color: $white;
+    *::before {
+      position: absolute;
+      bottom: 94px;
+      z-index: 1;
+    }
+
+    &__item {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 23px 0;
+      //flex-direction: row;
+      display: grid;
+      grid-template-columns: 3fr 1fr 1fr 1fr;
+      align-items: center;
+      background: none;
+      border-radius: 0;
+      border-bottom: 1px solid $light;
+      position: relative;
+      &:last-child {
+        border-bottom: none;
+      }
+      * {
+        margin: 0;
+      }
+
+      &:not(:first-child) *:before {
+        display: none;
+      }
+    }
+    &__btn {
+      position: static;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-width: $xl) {
+  .price-table__item {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,19 @@
+//Colors
+$white: #FFFFFF;
+$pink: #FF3E79;
+$light: #EAEAEA;
+$black: #1B1C21;
+$blue: #41F6D7;
+$gray: #7E7E82;
+$line: #D9FFF5; // <--
+$gradient: linear-gradient(270deg, #F8F8F8 0%, #FFF 98.61%);
+
+//Breakpoints
+$xs: 320px;
+$md: 768px;
+$ms: 1366px;
+$xl: 1440px;
+
+//Default values
+$border-radius: 6px;
+$border: 1px solid $light;  

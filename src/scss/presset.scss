@@ -1,0 +1,58 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0 auto;
+  font-family: 'TT Lakes', sans-serif;
+  background: #f8f8f8;
+  color: #1b1c21;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+button {
+  background: none;
+  border: none;
+}
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1b1c21;
+}
+ul {
+  list-style-type: none;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+.wrapper {
+  max-width: $ms;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: $xl) {
+  body {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    grid-template-areas:
+      'menu main'
+      'footer footer';
+    //grid-template:'menu main' 320px 1fr 'footer footer' 1fr 1fr;
+  }
+  footer {
+    grid-area: footer;
+  }
+}

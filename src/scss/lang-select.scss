@@ -1,0 +1,14 @@
+.lang-select {
+  display: flex;
+
+  &__item {
+    margin-right: 7px;
+  }
+
+  &__item input {
+    display: none;
+  }
+  &__item--selected {
+    color: $gray;
+  }
+}

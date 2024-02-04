@@ -1,0 +1,33 @@
+.slide-menu {
+  list-style-type: none;
+  display: flex;
+  letter-spacing: -0.2px;
+  /*overflow: scroll;*/
+  //overflow-x: scroll;
+
+  &__item {
+    flex-shrink: 0;
+
+    &--selected * {
+      border: 2px solid #b8ffec;
+      border-radius: 6px;
+    }
+  }
+
+  &__item * {
+    color: #7e7e82;
+    line-height: 24px;
+    font-weight: 500;
+    display: inline-block;
+    height: 40px;
+    padding: 8px 1em;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+@media screen and (min-width: $xl) {
+  .slide-menu {
+    //overflow-x: visible;
+    flex-wrap: wrap;
+  }
+}

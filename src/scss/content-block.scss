@@ -1,0 +1,51 @@
+.content-block {
+  border-top: 1px solid $line;
+  & > * {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  &__header {
+    color: $gray;
+
+    background: $gradient;
+    min-height: 56px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+
+    & * {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px; /* 150% */
+      letter-spacing: -0.2px;
+      text-transform: uppercase;
+    }
+  }
+  &__main {
+    padding-bottom: 24px;
+    padding-top: 16px;
+  }
+  &__footer {
+    margin-bottom: 32px;
+  }
+}
+
+@media screen and (min-width: $md) {
+  .content-block {
+    & > * {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+    &__main {
+      padding-top: 24px;
+    }
+  }
+}
+
+@media screen and (min-width: $xl) {
+  .content-block {
+    & > * {
+      padding-left: 34px;
+      padding-right: 34px;
+    }
+  }
+}
