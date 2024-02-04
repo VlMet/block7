@@ -18,7 +18,9 @@ const resizableSwiper = (breakpoint, swiperClass, swiperSettings, callback) => {
       return enableSwiper(swiperClass, swiperSettings)
     } else {
       if (swiper !== undefined) {
-        if (swiper.current && swiper.current.initialized) {
+        //console.log(swiper)
+        if (!swiper.destroyed) {
+          //console.log('destroy')
           swiper.destroy(true, true)
         }
       }
