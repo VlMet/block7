@@ -7,8 +7,8 @@
 
   &__item {
     flex-shrink: 0;
-
-    &--selected * {
+    &--selected *,
+    &:hover * {
       border: 2px solid #b8ffec;
       border-radius: 6px;
     }

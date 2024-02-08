@@ -60,4 +60,10 @@ window.addEventListener('DOMContentLoaded', () => {
   const modal8 = new initModal('#call', '#call-btn2', 'right')
   const modal9 = new initModal('#feedback', '#chat-btn1', 'right')
   const modal0 = new initModal('#feedback', '#chat-btn2', 'right')
+
+  document.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+      document.querySelector('.blur-window').dispatchEvent(new Event('click'))
+    }
+  })
 })

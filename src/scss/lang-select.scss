@@ -3,6 +3,9 @@
 
   &__item {
     margin-right: 7px;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__item input {
