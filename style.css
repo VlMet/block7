@@ -1337,7 +1337,8 @@ img {
   /*overflow: scroll;*/ }
   .slide-menu__item {
     flex-shrink: 0; }
-    .slide-menu__item--selected * {
+    .slide-menu__item--selected *,
+    .slide-menu__item:hover * {
       border: 2px solid #b8ffec;
       border-radius: 6px; }
   .slide-menu__item * {
@@ -1409,7 +1410,11 @@ img {
          column-gap: 32px; } }
 
 .content-block {
-  border-top: 1px solid #D9FFF5; }
+  border-top: 1px solid #D9FFF5;
+  /*&__wrap {
+    max-width: $md;
+    margin: 0 auto;
+  }*/ }
   .content-block > * {
     padding-left: 16px;
     padding-right: 16px; }
@@ -1420,6 +1425,8 @@ img {
     padding-top: 16px;
     padding-bottom: 16px; }
     .content-block__header * {
+      max-width: 1440px;
+      margin: 0 auto;
       font-weight: 400;
       font-size: 16px;
       line-height: 24px;
@@ -1428,9 +1435,12 @@ img {
       text-transform: uppercase; }
   .content-block__main {
     padding-bottom: 24px;
-    padding-top: 16px; }
+    padding-top: 16px;
+    max-width: 1440px;
+    margin: 0 auto; }
   .content-block__footer {
-    margin-bottom: 32px; }
+    max-width: 1440px;
+    margin: 0 auto 32px; }
 
 @media screen and (min-width: 768px) {
   .content-block > * {
@@ -1663,12 +1673,15 @@ img {
   margin-top: 20px; }
 
 .menu__item {
-  margin-bottom: 2rem; }
-  .menu__item--selected {
-    position: relative; }
-    .menu__item--selected * {
-      color: #7E7E82; }
-  .menu__item--selected::before {
+  margin-bottom: 2rem;
+  position: relative; }
+  .menu__item * {
+    transition: color 0.2s; }
+  .menu__item:hover * {
+    color: #7E7E82; }
+  .menu__item--selected * {
+    color: #7E7E82; }
+  .menu__item--selected::before, .menu__item:hover::before {
     content: '';
     display: block;
     height: 2rem;
@@ -1687,7 +1700,7 @@ img {
       margin-top: 50px; }
     .menu__item {
       margin-bottom: 2.5rem; }
-      .menu__item--selected::before {
+      .menu__item--selected::before, .menu__item:hover::before {
         left: -24px; } }
 
 @media screen and (min-width: 1440px) {
@@ -1705,6 +1718,8 @@ img {
   display: flex; }
   .lang-select__item {
     margin-right: 7px; }
+    .lang-select__item:hover {
+      text-decoration: underline; }
   .lang-select__item input {
     display: none; }
   .lang-select__item--selected {
